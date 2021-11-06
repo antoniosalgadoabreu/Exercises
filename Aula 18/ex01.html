@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<label for="inome">Nome:</label>
+	<input id="inome" placeholder="Text" type="text"/>
+	<p id="ierroNome"></p>
+	<br>
+		<label for="idade">Idade:</label>
+	<input id="input-1" placeholder="Text" type="text"/>
+	<br>
+		<label for="icidade">Cidade:</label>
+	<input id="icidade" placeholder="Text" type="text"/>
+	<br>
+	
+	<input type="submit" value="Submit" id="button-1"/>
+	
+	<script type="text/javascript">
+
+		function verificarNome(){
+			let aux = document.getElementById("inome").value;
+			aux = aux.trim();
+			
+			while (aux.includes("  ")) {
+				aux = aux.replace("  ", " ");
+			}
+			
+		}
+	</script>
+</body>
+</html>

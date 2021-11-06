@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	//Programa para demonstrar todos os numeros divisiveis por 3 de 0 até o numero que o usuario desejar.
+	
+	var vet = [];
+	var n1 = parseInt(prompt("Digite até qual valor deseja saber os numeros divisiveis por 3:"));
+
+	function coletar(numero) {
+		if (numero%3 == 0) {
+			vet.push(numero);
+		}
+	}
+	for (var i=0; i<=n1;i++) {
+		coletar(i);
+	}
+	for (var j = 0; j < vet.length;j++) {
+		document.write("<br>"+vet[j]);
+	}
+	document.write("<br><br>Programa finalizado.");
+</script>
+
+</body>
+</html>

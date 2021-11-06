@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body style="font-family: 'Consolas', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+<script type="text/javascript">
+
+	var h=parseInt(prompt("Digite a altura do triangulo:"));
+	
+	for (var i=1;i<=h;i++) {
+	
+		document.write("<br>");
+		for (var j=1;j<=i;j++) {
+
+			if (i==h || j==1 || j==i) {
+				document.write("@");
+				
+			} else {
+				document.write("_");
+			}
+		}
+	}
+</script>
+</body>
+</html>

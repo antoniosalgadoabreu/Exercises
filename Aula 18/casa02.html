@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Conosco</title>
+
+    <script type="text/javascript" src="..//Aula 18/script/casa02.js"></script>
+    
+    <style type="text/css">
+    	input{
+    		width: 200px;
+    		margin-right: 100px;
+    	}
+    	#button-1{
+    		width: 100px;
+    		margin-left: 65px;
+    		margin-bottom: 10px
+    	}
+    	#button-2{
+    		width: 100px;
+    		margin-left: 65px;
+    		margin-bottom: 10px
+    	}
+    	#button-3{
+    		width: 100px;
+    		margin-left: 65px;
+    		margin-bottom: 10px
+    	}
+    	
+	
+
+    </style>
+</head>
+<body style="padding: 0px; margin: 0px;" >
+
+    <div style="border: 3px solid red;
+    			margin-left: 50px;
+    			padding-left: 20px;
+    			margin-top: 30px;
+    			width: 250px;
+    			padding-top: 10px
+    			">
+		<label for="inome">Nome:</label>
+		<input id="inome" placeholder="Text" type="text"/>
+		<p id="ierro1"> </p>
+		<label for="icpf">CPF:</label>
+		<input id="icpf" placeholder="Text" type="text" onblur="checkNumero(this.value, 'cpf')" />
+		<p id="ierro2"> </p>
+		<p id="ierro7"> </p>
+		<label for="iemail">E-mail:</label>
+		<input id="iemail" placeholder="Text" type="text" onblur="verificarEmail(this.value)"/>
+		<p id="ierro3"> </p>
+		<p id="ierro8"> </p>
+		<label for="itelefone">Telefone:</label>
+		<input id="itelefone" placeholder="Text" type="text" onblur="checkNumero(this.value, 'telefone')" />
+		<p id="ierro4"> </p>
+		<p id="ierro6"> </p>
+		<label for="icidade">Cidade:</label>
+		<input id="icidade" placeholder="Text" type="text"/>
+		<p id="ierro5"> </p>
+		
+		<br>
+		<input type="submit" value="Cadastrar" id="button-1" onclick="verificarCampoVazio()"/>
+		<input type="submit" value="Localizar" id="button-2" onclick="verificarCampoVazio()"/>
+		<input type="submit" value="Excluir" id="button-3" onclick="verificarCampoVazio()"/>
+		<br>
+		
+    </div>
+    
+</body>
+</html>

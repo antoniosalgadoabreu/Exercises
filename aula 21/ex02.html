@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .telaA{
+            border: 2px solid white;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            margin-top: 160px;
+            box-shadow: 2px 2px 4px black;
+        }
+        .telaP{
+            border: 2px solid white;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            margin-left: 597px;
+            margin-top: 160px;
+            box-shadow: 2px 2px 4px black;
+        }
+        .telaM{
+            border: 2px solid white;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            position: absolute;
+            margin-left: 147px;
+            box-shadow: 2px 2px 4px black;
+        }
+
+    </style>
+
+</head>
+
+<body style="padding-left: 100px; margin: 0px; background-color: yellowgreen;">
+
+    <h1>Carrossel</h1>
+
+    <button onclick="anterior()">< Anterior</button>
+    <div class="telaA">
+        <img id="itelaA" src="img/img_3.jpg" alt="" style="width: 100px; height: 100px; border: 2px solid black;">
+    
+    </div>
+    <div class="telaM">
+        <img id="itela" src="img/img_0.jpg" alt="" style="width: 400px; height: 400px; border: 2px solid black;">
+        <p id="itexto" style="margin-left: 160px;">imagem bonita</p>
+    </div>
+    <div class="telaP">
+        <img id="itelaP" src="img/img_1.jpg" alt="" style="width: 100px; height: 100px; border: 2px solid black;">
+    
+    </div>
+    <button onclick="proximo()">Proximo ></button>
+    <br>
+    <br>
+
+    <script>
+
+        var lista = [];
+        var listaTexto = [];
+        var i = 0;
+        var a = 3;
+        var p = 1;
+
+
+        lista.push("img/img_0.jpg");
+        lista.push("img/img_1.jpg");
+        lista.push("img/img_2.jpg");
+        lista.push("img/img_3.jpg");
+
+        listaTexto.push("imagem bonita 1");
+        listaTexto.push("imagem bonita 2");
+        listaTexto.push("imagem bonita 3");
+        listaTexto.push("imagem bonita 4");
+
+        function anterior() {
+
+            if (i == 0) {
+                i = lista.length - 1;
+
+            } else {
+                i--;
+            }
+            if (a == 0) {
+                a = lista.length - 1;
+            } else {
+                a--;
+            }
+            if (p == 0) {
+                p = lista.length - 1;
+            } else {
+                p--;
+            }
+            console.log(a, i, p);
+            document.getElementById("itelaA").src = lista[a];
+            document.getElementById("itela").src = lista[i];
+            document.getElementById("itelaP").src = lista[p];
+            document.getElementById("itexto").innerHTML = listaTexto[i];
+        }
+        function proximo() {
+
+            if (i == lista.length - 1) {
+                i = 0;
+            } else {
+                i++;
+            }
+            if (a == lista.length - 1) {
+                a = 0;
+            } else {
+                a++;
+            }
+            if (p == lista.length - 1) {
+                p = 0;
+            } else {
+                p++;
+            }
+
+            console.log(a, i, p);
+            document.getElementById("itelaA").src = lista[a];
+            document.getElementById("itela").src = lista[i];
+            document.getElementById("itelaP").src = lista[p];
+            document.getElementById("itexto").innerHTML = listaTexto[i];
+
+        }
+    </script>
+
+</body>
+
+</html>

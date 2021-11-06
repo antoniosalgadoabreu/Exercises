@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Manipulação de String()</h1>
+	 <p>Função repeat() - faz a string repetir seu valor</p>
+	 <p>Sintaxe: repeat(quantidadeRepetição)</p>
+	 <br>
+	 <p>O comando trim(), remove os caracteres vazios do ínicio e o fim da String</p>
+	 
+	 <script>
+
+		 var frase = "Bom dia Step. ";
+		 document.write("String: " + frase);
+		 document.write("<br><br>Comando repeat() = " + frase.repeat(5));
+		 let frase2 = " Oi alunos da Step ";
+		 document.write("<br><br>Comando sem trim() = *" + frase2 + "*");
+		 document.write("<br>Comando com trim() = *" + frase2.trim() + "*");
+		 // podemos usar mais de um comando.
+		 document.write("<br>Comando length sem trim() = " + frase2.length);
+		 document.write("<br>Comando length com trim() = " + frase2.trim().length );
+		 document.write("<br><br>Comando sem trim() = *" + frase2.repeat(4) + "*");
+		 document.write("<br>Comando com trim() = *" + frase2.repeat(4).trim() + "*");
+		 document.write("<br>Comando com trim() = *" + frase2.trim().repeat(4) + "*");
+	 </script>
+
+</body>
+</html>

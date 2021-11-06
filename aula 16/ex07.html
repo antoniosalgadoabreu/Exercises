@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	//faï¿½a uma funï¿½ï¿½o que receberï¿½ uma string contendo uma frase.
+	//exiba a quantidade na tela da quantidade de vogais, consoantes, numeros, espaï¿½os que a frase tem e a quantidade de palavras.
+		
+		var vetor1 = ['a','e','i','o','u'];
+		var vetor2 = ['b','c','d','f','g','h','j','k','l','m','n','p','q','r','s','t','v','x','y','w','z'];
+		var vetor3 = ['0','1','2','3','4','5','6','7','8','9'];
+	
+		var vogal = 0, consoante = 0, espaco = 0, numero = 0;
+			
+		var frase = prompt("Digite o seu texto:");
+
+		quantidade(frase);
+	
+		function quantidade(texto){
+	
+			texto = texto.trim();
+			texto = texto.toLowerCase();
+			
+			for (let i = 0; i < texto.length; i++) {
+				for (let j = 0; j < vetor1.length; j++) {
+					if (texto.charAt(i) == vetor1[j]) {
+						vogal += 1;
+					}
+				}
+				for (let k = 0; k < vetor2.length; k++) {
+					if (texto.charAt(i) == vetor2[k]) {
+						consoante += 1;
+					}
+				}
+				for (let p = 0; p < vetor3.length; p++) {
+					if (texto.charAt(i) == vetor3[p]) {
+						numero += 1;
+					}
+				}
+				if (texto.charAt(i) == " ") {
+					espaco += 1;
+				}
+			}
+
+			document.write("<br>A quantidade de vogais: "+vogal+", a quantidade de consoantes: "+consoante+", a quantidade de números: "+numero+", a quantiade de espaços: "+espaco+".");
+		}
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Aula 17 e 18, Exemplo 14</title>
+<meta charset="utf-8">
+</head>
+<body>
+	
+	<h1>Manipulação de String()</h1>
+	
+	<p>A função substring () extrai os caracteres de uma sequência
+	entre dois índices especificados e retorna a nova sub sequência. Este
+	método extrai os caracteres em uma sequência entre "start" e "end",
+	sem incluir o próprio "end". <br>Se "start" for maior que "end", esse
+	método trocará os dois argumentos, significando str.substring (1, 4)
+	== str.substring (4, 1).<br> Se "start" ou "end" for menor que 0, será
+	tratado como se fosse 0. <br>Nota: O método substring () não altera a
+	sequência original.</p>
+	
+	<p> O comando substring pode receber um argumento onde ele pega daquele índice até o final da String, ou </p>
+	
+	<p> O comando substring precisa receber 2 argumentos, o valor inicial e o valor final+1.</p>
+	
+	<p> Se "start" for menor que 0, ele iniciará a extração da posição de índice 0:</p>
+	<br>
+	
+	<script>
+		var frase = "Bom dia Alunos da Step.";
+		document.write("String: " + frase);
+		document.write("<br>Comando substring(15) = " + frase.substring(15));
+		document.write("<br>Comando substring(9) = " + frase.substring(9));
+		document.write("<br>Comando substring(0,3) = " + frase.substring(0,3));
+		document.write("<br>Comando substring(4,7) = " + frase.substring(4,7));
+		document.write("<br>Comando substring(8,14) = " + frase.substring(8,14));
+		document.write("<br>Comando substring(14,8) = " + frase.substring(14,8));
+		document.write("<br>Comando substring(-5,7) = " + frase.substring(-5,7));
+	</script>
+</body>
+</html>

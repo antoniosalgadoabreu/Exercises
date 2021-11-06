@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<label id="label-1">Número 1:</label>
+	<input type="text" id="vn1">
+	<br>
+	<label id="label-2">Número 2:</label>
+	<input id="vn2" type="text"/>
+	<br>
+	<label for="input-1">Resultado:</label>
+	<input id="res" type="text"/>
+	<br>
+	<input type="button" id="botao" onclick="soma()">
+	
+	<script type="text/javascript">
+
+		var n1, n2, total;
+
+		function soma(){
+			n1 = document.getElementById("vn1").value;
+			n2 = document.getElementById("vn2").value;
+			total = parseInt(n1) + parseInt(n2);
+			document.getElementById("res").value = total;
+		}
+	</script>
+	
+</body>
+</html>

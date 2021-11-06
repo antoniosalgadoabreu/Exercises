@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<p>Programa para verificar se a letra digitada é uma vogal.</p>
+
+<script>
+	//Comando switch()
+	//Faça um programa em Java para o usuário digitar um caracter.
+	//Diga se o caracter digitado é vogal ou não.
+	
+	var op = prompt("Digite uma letra:");
+	
+	switch (op) {
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U':
+		document.write("O caracter <n>" + op + "</n> é vogal.");
+		break;
+		default:
+		document.write("O caracter " + op + " não é vogal.");
+	}
+	document.write("<br><br>Programa finalizado.");
+</script>
+</body>
+</html>

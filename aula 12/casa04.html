@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var op = prompt("Digite um numero de 1 a 7:");
+	var semana = ["Domingo","Segunda-feira","Terca-feira","Quarta-feira","Quinta-feira","Sexta-feira","Sabado"];
+	var aux1;
+	
+	function verificar(n1){
+		aux1 = parseInt(n1);
+		for (var i=0; i < semana.length; i++) {
+			if(aux1-1==i){
+				document.write("<br>O numero ("+(aux1)+") digitado, corresponde ao seguinte dia da semana: "+semana[i]+".");
+			}
+		}
+	}
+	switch (op) {
+	case "1":
+		verificar(op);
+		break;
+	case "2":
+		verificar(op);		
+		break;
+	case "3":
+		verificar(op);
+		break;
+	case "4":
+		verificar(op);
+		break;
+	case "5":
+		verificar(op);
+		break;
+	case "6":
+		verificar(op);
+		break;
+	case "7":
+		verificar(op);
+		break;
+	default:
+		document.write("<br>O caracter ("+op+") digitado, nao e um numero de 1 a 7.");
+		break;
+	}
+	document.write("<br><br>Programa finalizado.");
+</script>
+
+</body>
+</html>

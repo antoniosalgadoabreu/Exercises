@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var vet = [];
+	var n1, media;
+	
+	function media(nu1, nu2, nu3, nu4){
+			media = (nu1 + nu2 + nu3 + nu4)/4;
+			document.write("A media do aluno é "+media+" pontos.");
+		}
+	for (var i =0; i<=3; i++) {
+		n1 = parseInt(prompt("Digite a nota "+(i+1)+" do aluno:"));
+		vet.push(n1);
+	}
+	media(vet[0],vet[1],vet[2],vet[3]);
+
+	document.write("<br><br>Programa finalizado.");
+	
+	
+</script>
+
+</body>
+</html>

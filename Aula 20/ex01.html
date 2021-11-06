@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+	<form id="form-1">
+		<label for="iSenha">Senha:</label>
+		<input id="iSenha" placeholder="Text" type="text" onkeyup="verificarSenha()"/>
+		
+		<p id = "ip1">A senha deverá ter no minimo 8 caracteres</p>
+		<p id = "ip2">A senha deverá ter pelo menos uma letra maiuscula</p>
+		<p id = "ip3">A senha deverá ter pelo menos um numero</p>
+		<p id = "ip4">A senha deverá ter pelo menos um caracter especial "@ # $ & * % _"</p>
+		
+	</form>
+	<script type="text/javascript">
+		function verificarSenha() {
+			let senha = document.getElementById("iSenha").value;
+
+			senha = senha.trim();
+			document.getElementById("iSenha").value = senha;
+
+			//analisando o tamamnho
+			if(senha.length >= 8){
+				document.getElementById("ip1").style.color = "green";
+			} else {
+				document.getElementById("ip1").style.color = "red";
+			}
+			
+			// analisando se tem numeros
+			if (senha.includes("0")||senha.includes("1")||senha.includes("2")||senha.includes("3")||senha.includes("4")||senha.includes("5")||senha.includes("6")||senha.includes("7")||senha.includes("8")||senha.includes("9")) {
+				document.getElementById("ip3").style.color = "green";
+			} else {
+				document.getElementById("ip3").style.color = "red";
+			}
+			
+			// verificar caracteres especiais
+			let caracterEspecial = "@#$&*%_";
+			let count = 0;
+
+			for (var i = 0; i < caracterEspecial.length; i++) {
+				if (senha.includes(caracterEspecial.charAt(i))) {
+					count++;
+					break;
+				}
+			}
+			if (count != 0) {
+				document.getElementById("ip4").style.color = "green";
+			} else {
+				document.getElementById("ip4").style.color = "red";
+			}
+			
+			// verifcar caracteres maiusculos
+			let caracterM = "ABCDEFGHIJLMNOPQRSTUVXZWY";
+			let count2 = 0;
+
+			for (var i = 0; i < caracterM.length; i++) {
+				if (senha.includes(caracterM.charAt(i))) {
+					count2++;
+					break;
+				}
+			}
+			if (count2 != 0) {
+				document.getElementById("ip3").style.color = "green";
+			} else {
+				document.getElementById("ip3").style.color = "red";
+			}
+		}
+		
+		
+	</script>
+
+</body>
+</html>

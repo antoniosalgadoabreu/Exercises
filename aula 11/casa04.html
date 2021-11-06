@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	var h=parseInt(prompt("Digite a altura do quadrado:"));
+	
+	for (var i=1;i<=h;i++) {
+	
+		document.write("<br>");
+		for (var j=1;j<=h;j++) {
+
+			if (i==1 || i==h || j==1 || j==h) {
+				document.write("@");
+				
+			} else {
+				document.write(" ");
+			}
+		}
+	}
+</script>
+</body>
+</html>

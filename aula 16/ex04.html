@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Manipulação de String()</h1>
+	 <p>Função toUpperCase() - retorna a String em Caixa Alta</p>
+	 <p>Função toLowerCase() - retorna a String em Caixa Baixa</p>
+	 <p>Função includes() - equivale ao indexOf, mas retorna um valor booleano, true case localizado e false caso não.</p>
+	 
+	 <script>
+		 var frase = "Bom dia Step e Alunos na Step.";
+		 document.write("String: " + frase);
+		 document.write("<br>O tamanha da String é " + frase.length);
+		 document.write("<br><br>Comando toUpperCase() = " + frase.toUpperCase());
+		 document.write("<br><br>Comando toLowerCase() = " + frase.toLowerCase());
+		 document.write("<br><br> Comparando indexOf() com o comando includes()");
+		 document.write("<br>Localizando \'dia\', índice = " + frase.indexOf("dia"));
+		 document.write("<br>Localizando \'dia\', boolean = " + frase.includes("dia"));
+		 document.write("<br>Localizando \'Dia\', boolean = " + frase.includes("Dia"));
+		 document.write("<br>Localizando \' dia \', boolean = " + frase.includes(" dia "));
+		 document.write("<br>Localizando \'.\', boolean = " + frase.includes("."));
+		 document.write("<br>Localizando \' \', boolean = " + frase.includes(" "));
+	
+	 </script>
+</body>
+</html>

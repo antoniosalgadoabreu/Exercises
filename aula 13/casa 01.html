@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="../aula 13/CSS/stiloCalculadora.css">
+
+</head>
+
+<body style="padding: 0px; margin: 0px;">
+    <div id="corpoId">
+        <input id="ivisor" type="text" value="0">
+        <table align="center" cellspacing=0 rules="none">
+            <tr style="border: 1px solid none;">
+                <td class="areaBotao">
+                    <button>%</button>
+                </td>
+                <td class="areaBotao">
+                    <button id="bCE" onclick="limpaCE()">CE</button>
+                </td>
+                <td class="areaBotao">
+                    <button id="bc" onclick="limpaC()">C</button>
+                </td>
+                <td class="areaBotao">
+                    <button><img src="../aula 13/imagens/foto back.jpg" alt="nao carregar" align="center"
+                            style="width: 20px; height: 20px;"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="areaBotao"></td>
+                <td class="areaBotao">
+                    <button id="b**" onclick="quadrado()"><b> X²</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="bRaiz" onclick="raiz()"><img src="../aula 13/imagens/32538.png" alt="nao carregar"
+                            align="center" style="width: 20px; height: 20px;"></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b/" onclick="operador('/')">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="areaBotao">
+                    <button id="b7" onclick="preencher(7)"><b>7</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b8" onclick="preencher(8)"><b>8</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b9" onclick="preencher(9)"><b>9</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="bx" onclick="operador('*')">X</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="areaBotao">
+                    <button id="b4" onclick="preencher(4)"><b>4</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b5" onclick="preencher(5)"><b>5</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b6" onclick="preencher(6)"><b>6</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b-" onclick="operador('-')">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="areaBotao">
+                    <button id="b1" onclick="preencher(1)"><b>1</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b2" onclick="preencher(2)"><b>2</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b3" onclick="preencher(3)"><b>3</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b+" onclick="operador('+')">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="areaBotao">
+                </td>
+                <td class="areaBotao">
+                    <button id="b0" onclick="preencher(0)"><b>0</b></button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b." onclick="preencher('.')">.</button>
+                </td>
+                <td class="areaBotao">
+                    <button id="b=" onclick="total()" style="background-color: cornflowerblue;">=</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+
+        var n1 = null, op = null, n2 = null, aux = 0;
+
+        function preencher(num) {
+            if (parseFloat(document.getElementById("ivisor").value) == 0 || aux != 0 || document.getElementById("ivisor").value == "ERRO") {
+                document.getElementById("ivisor").value = "";
+                aux = 0;
+            }
+            document.getElementById("ivisor").value += num;
+        }
+        function operador(i) {
+
+            if (op != null) {
+                n2 = document.getElementById("ivisor").value;
+                document.getElementById("ivisor").value = "";
+                if (n2 == "") {
+                    n2 = 0;
+                }
+                switch (op) {
+                    case "+":
+                        n1 = parseFloat(n1) + parseFloat(n2);
+                        document.getElementById("ivisor").value = n1;
+                        op = i;
+                        aux = 1;
+                        break;
+                    case "-":
+                        n1 = parseFloat(n1) - parseFloat(n2);
+                        document.getElementById("ivisor").value = n1;
+                        op = i;
+                        aux = 1;
+                        break;
+                    case "*":
+                        n1 = parseFloat(n1) * parseFloat(n2);
+                        document.getElementById("ivisor").value = n1;
+                        op = i;
+                        aux = 1;
+                        break;
+                    case "/":
+                        n1 = parseFloat(n1) / parseFloat(n2);
+                        document.getElementById("ivisor").value = n1;
+                        op = i;
+                        aux = 1;
+                        break;
+                    default:
+                        document.getElementById("ivisor").value = "ERRO";
+                        break;
+                }
+            } else {
+                n1 = document.getElementById("ivisor").value;
+                op = i;
+                document.getElementById("ivisor").value = "";
+            }
+        }
+        function total() {
+
+            let total;
+            if (op != null) {
+                n2 = document.getElementById("ivisor").value;
+                if (n2 == "") {
+                    n2 = n1;
+                }
+                switch (op) {
+                    case "+":
+                        total = parseFloat(n1) + parseFloat(n2);
+                        document.getElementById("ivisor").value = total;
+                        break;
+                    case "-":
+                        total = parseFloat(n1) - parseFloat(n2);
+                        document.getElementById("ivisor").value = total;
+                        break;
+                    case "*":
+                        total = parseFloat(n1) * parseFloat(n2);
+                        document.getElementById("ivisor").value = total;
+                        break;
+                    case "/":
+                        total = parseFloat(n1) / parseFloat(n2);
+                        document.getElementById("ivisor").value = total;
+                        break;
+                    default:
+                        document.getElementById("ivisor").value = "ERRO";
+                        break;
+                }
+                op = null;
+                n2 = null;
+            } else {
+                n1 = document.getElementById("ivisor").value;
+                document.getElementById("ivisor").value = parseFloat(n1);
+            }
+
+        }
+        function quadrado() {
+            n1 = document.getElementById("ivisor").value;
+            let total = parseFloat(n1) ** 2;
+            document.getElementById("ivisor").value = total;
+        }
+        function limpaC() {
+            document.getElementById("ivisor").value = "0";
+            n1 = null;
+            n2 = null;
+            op = null;
+        }
+        function limpaCE() {
+            document.getElementById("ivisor").value = "0";
+            op = null;
+        }
+        function raiz() {
+            n1 = document.getElementById("ivisor").value;
+            let total = parseFloat(n1) ** 0.5;
+            document.getElementById("ivisor").value = total;
+        }
+    </script>
+</body>
+
+</html>

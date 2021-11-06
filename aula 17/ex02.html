@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<label for="inome">Digite o nome completo:</label>
+	<input id="inome" placeholder="Text" type="text" onblur="primeiroNome(this.value)"/>
+	<p id = "ierro"></p>
+	<br>
+
+<script type="text/javascript">
+
+	function primeiroNome(nomeCompleto) {
+
+		nomeCompleto = nomeCompleto.trim();
+
+		let pEspVazio = nomeCompleto.indexOf(" ");
+
+		if(pEspVazio == -1){
+			document.getElementById("ierro").style.color = "";
+			document.getElementById("ierro").style.color = "red";
+			document.getElementById("ierro").innerHTML = "Digite o nome todo.";
+		}else{
+			document.getElementById("ierro").style.color = "";
+
+			let pNome = nomeCompleto.substring(0, pEspVazio);
+
+			document.getElementById("ierro").style.color = "green";
+			document.getElementById("ierro").innerHTML = "Seu primeiro nome é "+pNome;
+			
+		}
+	}
+	
+</script>
+
+</body>
+</html>

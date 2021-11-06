@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var media, n1;
+	var vet = [];
+	var soma=0;
+
+	for (var i=0;i<=9;i++) {
+
+		n1 = parseInt(prompt("Digite uma nota do aluno:"));
+		vet.push(n1);
+		
+		soma = soma + vet[i];
+	}
+	media = soma/10;
+
+	document.write("A media das notas do aluno: "+media+" pontos.");
+
+	document.write("<br><br>Programa finalizado.");
+	
+</script>
+
+</body>
+</html>

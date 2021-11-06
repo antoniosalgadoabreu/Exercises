@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Manipulação de String()</h1>
+<p>Função charAt(indice) - retorna um caracter conforme o valor do índice</p>
+<script>
+	var frase = "Bom dia Alunos.";
+	document.write("String: " + frase);
+	document.write("<br>O tamanha da String é " + frase.length);
+	document.write("<br>Índice 0 da String é " + frase.charAt(0));
+	document.write("<br>Índice 0 da String é " + "Bom dia Alunos.".charAt(0));
+	document.write("<br>Índice 11 da String é " + frase.charAt(11));
+	document.write("<br>Índice -1 da String é " + frase.charAt(-1));
+	document.write("<br>Índice 16 da String é " + frase.charAt(16));
+	document.write("<br>Índice 14 da String é " + frase[14]);
+	// como uma string se comporta como um vetor de caracteres, todo vetor começa
+	// no índice 0 e não podemos "pegar" valores que sejam maior que o tamanho do mesmo.
+	document.write("<br><br>Exibindo todos os caractres da String, cada caracter em umalinha: " + frase);
+	for (let i = 0; i < frase.length; i++) {
+	document.write("<br>" + frase.charAt(i));
+	}
+	document.write("<br><br>Exibindo todos os caractres da String, cada caracter em uma linha com índice: " + frase);
+		for (let i = 0; i < frase.length; i++) {
+		document.write("<br>Índice " + i + " da String é " + frase.charAt(i));
+		}
+		document.write("<br><br>Exibindo todos os caractres da String, cada caracter em uma linha com índice e posição: " + frase);
+		for (let i = 0; i < frase.length; i++) {
+		document.write("<br>Índice " + i + ", na Posição " + (i + 1) + ", da String é " +
+		frase.charAt(i));
+		}
+		document.write("<br><br>Exibindo todos os caractres da String, cada caracter em uma linha usando []: " + frase);
+		for (let i = 0; i < frase.length; i++) {
+		document.write("<br>Índice " + i + ", da String é " + frase[i]);
+		}
+		</script>
+
+</body>
+</html>

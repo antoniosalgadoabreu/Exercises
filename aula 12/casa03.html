@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var op = prompt("Digite um caracter:");
+	var aux;
+	
+	function mensagem(n1,n2){
+		if (n2) {
+			document.write("O caracter ("+n1+") e um numero.");	
+		} else {
+			document.write("O caracter ("+n1+") nao e um numero.");
+		}
+		
+	}
+	switch (op) {
+		case "0":
+		case "1":
+		case "2":
+		case "3":
+		case "4":
+		case "5":
+		case "6":
+		case "7":
+		case "8":
+		case "9":
+			aux = true;	
+			break;
+		default:
+			aux = false;
+			break;
+	}
+	mensagem(op, aux);
+
+	document.write("<br><br>Programa finalizado.");
+</script>
+
+</body>
+</html>

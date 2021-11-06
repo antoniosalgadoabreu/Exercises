@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Acessando e inserindo valores na array/matriz</h1>
+
+<script>
+	// todo array é acessado pelo seu índice. O índice é representado por números
+	// inteiros e inicia-se com o 0.
+	// o primeiro elemento de um vetor sempre é o índice zero.
+	// declaração de vetor vazio
+	var v1 = [] ;
+	document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>" );
+	// adicionando um valor a um índice do vetor
+	// sintaxe para acessar um índice
+	// nome_array[índice];
+	v1[0] = "casa";
+	document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>" );
+	document.write("<p> O conteúdo do vetor v1 no índice 0 é: " + v1[0] + "<\p>" );
+	// inserindo valores na array
+	v1[1] = "bairro";
+	v1[2] = "cidade";
+	v1[3] = "estado";
+	v1[4] = "RJ";
+	v1[5] = 996;
+	document.write("<p> O conteúdo do vetor v1 no índice 1 é: " + v1[1] + "<\p>" );
+	document.write("<p> O conteúdo do vetor v1 no índice 2 é: " + v1[2] + "<\p>" );
+	document.write("<p> O conteúdo do vetor v1 no índice 3 é: " + v1[3] + "<\p>" );
+	document.write("<p> O conteúdo do vetor v1 no índice 4 é: " + v1[4] + "<\p>" );
+	document.write("<p> O conteúdo do vetor v1 no índice 5 é: " + v1[5] + "<\p>" );
+	
+	document.write("<p> O tamanho do vetor v1 é: " + v1.length + "<\p>" );
+	
+</script>
+</body>
+</html>

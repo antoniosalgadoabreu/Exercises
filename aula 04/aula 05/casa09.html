@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		alert("Este programa ira dizer se o numero que ira digitar esta entre 0 e 9.");
+
+		var n1 = parseInt(prompt("Digite um numero: "));
+		var aux1 = false;
+
+		if (n1>=0) {
+			if (n1<=9) {
+				aux1 = true;
+			}
+		}
+
+		if (aux1) {
+			document.write("O numero "+n1+" esta entre 0 e 9");
+		} else {
+			document.write("O numero "+n1+" nao esta entre 0 e 9");
+		}
+	</script>
+</body>
+</html>

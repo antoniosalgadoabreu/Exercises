@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// faça um script para ler 6 numeros, verifique o maior numero digitado.
+	
+	var n1, maior = null;
+	
+	for (var i=1;i<=6;i++) {
+
+		n1 = parseInt(prompt("Digite um número:"));
+
+		if (n1 > maior || maior==null) {
+			maior = n1;
+		}
+	}
+	document.write("O maior numero é "+maior);
+	
+	document.write("<br><br>Programa finalizado.");
+	
+</script>
+
+</body>
+</html>

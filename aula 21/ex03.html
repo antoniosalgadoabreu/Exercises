@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="..//aula 21/css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Carrossel</h1>
+
+    <button onclick="anterior()"><h1><</h1> </button>
+    <div class="carrosel">
+        <div class="container">
+            <img id="itelaA" src="img/img_3.jpg" alt="">
+        </div>
+    </div>
+    <div class="carrosel">
+        <div class="container">
+            <img id="itela" src="img/img_0.jpg" alt="">
+            <p id="itexto">imagem bonita 1</p>
+        </div>
+    </div>
+    <div class="carrosel">
+        <div class="container">
+            <img id="itelaP" src="img/img_1.jpg" alt="">
+        </div>
+    </div>
+    <button onclick="proximo()"> <h1>></h1></button>
+    <br>
+
+    <br>
+
+    <script>
+
+        var lista = [];
+        var listaTexto = [];
+        var i = 0;
+
+
+        lista.push("img/img_0.jpg");
+        lista.push("img/img_1.jpg");
+        lista.push("img/img_2.jpg");
+        lista.push("img/img_3.jpg");
+
+        listaTexto.push("imagem bonita 1");
+        listaTexto.push("imagem bonita 2");
+        listaTexto.push("imagem bonita 3");
+        listaTexto.push("imagem bonita 4");
+
+        function anterior() {
+
+            if (i == 0) {
+                i = lista.length - 1;
+                document.getElementById("itelaA").src = lista[i];
+
+            } else {
+                i--;
+                document.getElementById("itelaA").src = lista[i];
+            }
+            if (i == 0) {
+                i = lista.length - 1;
+                document.getElementById("itelaP").src = lista[i];
+            } else {
+                i--;
+                document.getElementById("itelaP").src = lista[i];
+
+            }
+            if (i == 0) {
+                i = lista.length - 1;
+                document.getElementById("itela").src = lista[i];
+                document.getElementById("itexto").innerHTML = listaTexto[i];
+            } else {
+                i--;
+                document.getElementById("itela").src = lista[i];
+                document.getElementById("itexto").innerHTML = listaTexto[i];
+            }
+            console.log(a, i, p);
+
+        }
+        function proximo() {
+
+            if (i == lista.length - 1) {
+                i = 0;
+                document.getElementById("itelaA").src = lista[i];
+
+            } else {
+                i++;
+                document.getElementById("itelaA").src = lista[i];
+
+            }
+            if (i == lista.length - 1) {
+                i = 0;
+                document.getElementById("itelaP").src = lista[i];
+
+            } else {
+                i++;
+                document.getElementById("itelaP").src = lista[i];
+
+            }
+            if (i == lista.length - 1) {
+                i = 0;
+                document.getElementById("itela").src = lista[i];
+                document.getElementById("itexto").innerHTML = listaTexto[i];
+            } else {
+                i++;
+                document.getElementById("itela").src = lista[i];
+                document.getElementById("itexto").innerHTML = listaTexto[i];
+            }
+
+            console.log(a, i, p);
+
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var n1 = parseInt(prompt("Digite um número para verificar se é primo ou não."));
+	var cont=0;
+
+	for (var i=1; i<=n1; i++) {
+		if (n1%i==0) {
+			cont++;
+		}
+	}
+
+	if (cont==2) {
+		document.write("O número "+n1+" é primo.");
+	}else {
+		document.write("O número "+n1+" não é primo.");
+	}
+	document.write("<br><br>Programa finalizado.");
+</script>
+
+</body>
+</html>

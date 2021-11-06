@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var vogal = ['a','e','i','o','u','A','E','I','O','U'];
+	var di = prompt("Digite uma letra:");
+
+	function verificar(n1){
+		for (var i=0; i<vogal.length; i++) {
+			if (n1 == vogal[i]) {
+				return true;
+			}
+		}
+	}
+
+	if (verificar(di)) {
+		document.write("<br>A letra ("+di+") digitada e uma vogal");
+	}else {
+		document.write("<br>A letra ("+di+") digitada nao e uma vogal");
+	}
+	document.write("<br><br>Programa finalizado.");
+</script>
+
+</body>
+</html>

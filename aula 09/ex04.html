@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	var op, n1, n2;
+	
+	do{
+		document.write("<br><br>Menu");
+		document.write("<br>Digite uma opção abaixo:")
+		document.write("<br>1- Somar");
+		document.write("<br>2- Subtrair");
+		document.write("<br>3- Multiplicar");
+		document.write("<br>4- Dividir");
+		document.write("<br>s- Sair");
+		
+		op = prompt("Digite a opção desejada:");
+
+		document.write("<br><br>Voce escolheu a opção "+op);
+		
+		switch (op) {
+			case "1":
+				document.write("<br>Soma.");
+				n1 = parseInt(prompt("Digite o primeiro número"));
+				n2 = parseInt(prompt("Digite o segundo número"));
+				document.write("<br>Cálculo: "+n1+" + "+n2+" = "+(n1+n2));
+				break;
+			case "2":
+				document.write("<br>Subtração.");
+				n1 = parseInt(prompt("Digite o primeiro número"));
+				n2 = parseInt(prompt("Digite o segundo número"));
+				document.write("<br>Cálculo: "+n1+" - "+n2+" = "+(n1-n2));
+				break;
+			case "3":
+				document.write("<br>Multiplicação.");
+				n1 = parseInt(prompt("Digite o primeiro número"));
+				n2 = parseInt(prompt("Digite o segundo número"));
+				document.write("<br>Cálculo: "+n1+"*"+n2+" = "+(n1*n2));
+				break;
+			case "4":
+				document.write("<br>Divisão.");
+				n1 = parseInt(prompt("Digite o primeiro número"));
+				n2 = parseInt(prompt("Digite o segundo número"));
+				document.write("<br>Cálculo: "+n1+"/"+n2+" = "+(n1/n2));
+				break;
+			case "s":
+				document.write("<br><br>Sair.");
+				break;										
+			default:
+				document.write("<br>Opção inválida. Recomeçando o programa...");
+				break;
+		}
+		
+	}while(op!="s");
+	
+	document.write("<br><br>Fim do Programa.");
+	
+</script>
+
+</body>
+</html>

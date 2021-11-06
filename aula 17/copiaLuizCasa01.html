@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+</head>
+
+<body>
+    <script>
+        function nomeCompleto() {
+            let nomeCompleto = prompt("Digite seu nome completo.");
+
+            for (let i = 0; i < nomeCompleto.length; i++) {
+                let aux = nomeCompleto.charAt(i);
+                if (aux == "." || aux == "," || aux == "!" || aux == "?" || aux == "@"
+                    || aux == "$" || aux == "#"
+                    || aux == "&" || aux == "*"
+                    || aux == "1" || aux == "2"
+                    || aux == "2" || aux == "3"
+                    || aux == "4" || aux == "5"
+                    || aux == "6" || aux == "7"
+                    || aux == "8" || aux == "9"
+                    || aux == "0" || aux == "+") {
+
+                    nomeCompleto = nomeCompleto.replace(aux, "");
+                    i--;
+                }
+            }
+
+            nomeCompleto = nomeCompleto.trim()
+            let pEspVazio = nomeCompleto.indexOf(" ");
+            let pUltEspVazio = nomeCompleto.lastIndexOf(" ");
+            let pNome;
+            let mNome;
+            let ultNome;
+
+            if (pEspVazio == -1 || pUltEspVazio == -1) {
+                pNome = nomeCompleto;
+                document.write("<p>Seu nome é " + pNome.replace(" ", "") + "</p>")
+            } else {
+                pNome = nomeCompleto.substring(0, pEspVazio);
+                ultNome = nomeCompleto.substring(pUltEspVazio);
+                mNome = nomeCompleto.substring(pEspVazio, pUltEspVazio);
+                nomeCompletoGrande = pNome.toUpperCase() + " " + mNome.toUpperCase() + " " + ultNome.toUpperCase();
+
+                document.write("<p>O primeiro nome é " + pNome + "</p>");
+                document.write("<p>O nome do meio é " + mNome + "</p>");
+                document.write("<p>O ultimo nome é " + ultNome + "</p>");
+                document.write("<p>O nome completo é " + nomeCompletoGrande + "</p>");
+            }
+
+        }
+        nomeCompleto()
+    </script>
+</body>
+</html>

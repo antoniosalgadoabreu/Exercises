@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/estiloCasa01.css">
+
+</head>
+
+<body>
+
+	<div>
+		<label for="iNome">Nome:</label>
+		<input id="iNome"  type="text" />
+		<p id="ierroNome"> </p>
+		<label for="iEmail">E-mail:</label>
+		<input id="iEmail"  type="text" onkeyup="verificarEmail(this.value)" onblur="stylePretoEmail()" />
+		<p id="ierroEmail"> </p>
+		<p id="ierroEmail2"> </p>
+		<label for="iAssunto">Assunto:</label>
+		<input id="iAssunto"  type="text" />
+		<p id="ierroAssunto"> </p>
+		<label for="iMensagem">Mensagem:</label>
+		<textarea name="Texto" id="iMensagem" cols="24" rows="9"></textarea>
+		<p id="ierroMensagem"> </p>
+		<br>
+		<input type="submit" value="Enviar" id="bEnviar" onclick="verificarCampoVazio()" />
+		<br>
+
+	</div>
+	<script type="text/javascript" src="js/funcoesCasa01.js"></script>
+
+</body>
+
+</html>

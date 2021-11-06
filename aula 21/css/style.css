@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: wheat;
+  }
+  .carrosel{
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    margin: 20px;
+    background-color: whitesmoke;
+    border-radius: 6px;
+  }
+  .carrosel p{
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: larger;  
+    font-weight: 900;
+  }
+  .container{
+    display: flex;
+    margin: 40px;
+  }
+  img{
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+  }
+  #itela{
+    object-fit: cover;
+    height: 400px;
+    width: 400px;
+  }
+  button{
+    border: none;
+    background-color: lightcyan;
+    color: purple;
+    height: 100px;
+    width: 40px;
+    border-radius: 6px;
+  }
+  button:hover{
+    opacity: 0.8;
+    background-color: darkblue;
+    color: honeydew;
+    transition: 5ms;
+    outline: none;
+    }

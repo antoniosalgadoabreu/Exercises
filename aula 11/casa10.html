@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// faça um script para ler 8 numeros, verifique o maior numero digitado.
+	
+	var n1, menor = null;
+	
+	for (var i=1;i<=8;i++) {
+
+		n1 = parseInt(prompt("Digite um número:"));
+
+		if (n1 < menor || menor == null) {
+			menor = n1;
+		}
+	}
+	document.write("O menor numero é "+menor);
+	
+	document.write("<br><br>Programa finalizado.");
+	
+</script>
+
+</body>
+</html>

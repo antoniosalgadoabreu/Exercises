@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Manipulação de String()</h1>
+	 <p>Função indexOf() - retorna o índice da primeira ocorrência localizada()</p>
+	 <p>Função lastIndexOf() - retorna o índice da última ocorrência localizada()</p>
+	 <p>Quando a string não é localizada, retorna -1</p>
+	 
+	 <script>
+		 var frase = "Bom dia Step e Alunos na Step.";
+		 document.write("String: " + frase);
+		 document.write("<br>O tamanha da String é " + frase.length);
+		 document.write("<br><br>Comando indexOf(\'String \') ");
+		 document.write("<br>Localizando \'Bom\', índice = " + frase.indexOf("Bom"));
+		 document.write("<br>Localizando \'dia\', índice = " + frase.indexOf("dia"));
+		 document.write("<br>Localizando \'Step\', índice = " + frase.indexOf("Step"));
+		 document.write("<br>Localizando \'Dia\', índice = " + frase.indexOf("Dia"));
+		 document.write("<br>Localizando \'.\', índice = " + frase.indexOf("."));
+		 document.write("<br>Localizando \' \', índice = " + frase.indexOf(" "));
+		 document.write("<br><br>Comando lastIndexOf(\'String \') ");
+		 document.write("<br>Localizando \'Bom\', índice = " + frase.lastIndexOf("Bom"));
+		 document.write("<br>Localizando \'dia\', índice = " + frase.lastIndexOf("dia"));
+		 document.write("<br>Localizando \'Step\', índice = " + frase.lastIndexOf("Step"));
+		 document.write("<br>Localizando \'Dia\', índice = " + frase.lastIndexOf("Dia"));
+		 document.write("<br>Localizando \'.\', índice = " + frase.lastIndexOf("."));
+		 document.write("<br>Localizando \' \', índice = " + frase.lastIndexOf(" "));
+		 document.write("<br><br>Comparando indexOf() com lastIndexOf()");
+		 document.write("<br>Localizando primeira Ocorrência \' \', índice = " + frase.indexOf(" "));
+		 document.write("<br>Localizando a última Ocorrência \' \', índice = " + frase.lastIndexOf(" "));
+		 document.write("<br>Localizando primeira Ocorrência \'Step\', índice = " + frase.indexOf("Step"));
+		 document.write("<br>Localizando a última Ocorrência \'Step\', índice = " +
+		 frase.lastIndexOf("Step"));
+	 </script>
+</body>
+</html>

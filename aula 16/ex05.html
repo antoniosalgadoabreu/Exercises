@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	 <h1>Manipulação de String()</h1>
+	 <p>Função replace() - equivale ao comando substituir. devemos informar a String a ser localizada e o
+	 valor a ser substituído</p>
+	 <p>Sintaxe: replace(valorLocalizado, valorSubtituído)</p>
+	 <p>O comando replace substitui apenas a primeira ocorrência encontrada.</p>
+	 
+	 <script>
+		 var frase = "Bom dia Step e Alunos na Step.";
+
+		 document.write("String: " + frase);
+		 document.write("<br><br>Comando replace() = " + frase.replace("Bom dia", "Boa Noite"));
+		 document.write("<br><br>Comando replace() = " + frase.replace("Step", "stepi"));
+		 document.write("<br><br>Comando replace() = " + frase.replace("Alunos", "alunos"));
+		 document.write("<br>A String original continua com o mesmo valor: " + frase);
+	 </script>
+
+</body>
+</html>

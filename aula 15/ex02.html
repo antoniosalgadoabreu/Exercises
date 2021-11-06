@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Aula 15 e 16, Exemplo 04</title>
+<meta charset="utf-8">
+</head>
+<body>
+	
+	<h1>documento.elementeById()</h1>
+	<p>Evento - onchange </p>
+	<br>
+	<input type="text" name="valor1" id="ivalor1" onchange="verificarNumeroPositivo()"> 
+	<br>
+	<p id="ierro1"></p>
+	
+	<script>
+		function verificarNumeroPositivo(){
+
+			var aux = parseInt(document.getElementById("ivalor1").value);
+
+			if (aux < 0){
+				document.getElementById("ierro1").innerHTML = "Valor numérico inválido"
+				document.getElementById("ierro1").style.color = "red";
+			}else{
+				document.getElementById("ierro1").innerHTML = "OK - Conferido"
+				document.getElementById("ierro1").style.color = "green";
+			}
+		}
+		// dica ao selecionar um elemento
+		//para alterar uma imput use o atributo .value para acessar ou alterar seu conteúdo
+		//para alterar o conteúdo de um elemento, use .innerHTML
+		// para alterar o estilo use .style
+	</script>
+</body>
+</html>

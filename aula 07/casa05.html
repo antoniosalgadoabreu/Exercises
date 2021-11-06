@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+		alert("Este programa irá verificar se o caracter digitado é um número, uma pontuação, uma vogal, uma consoante.");
+		var le= prompt("Digite um caracter:");
+		var n1 = parseInt(le);
+		
+		if ((n1>=0)||(n1<=9)) {
+			document.write("Voce digitou um número.<br>");
+		} else {
+			if ((le==".")||(le==",")||(le==";")||(le==":")||(le=="?")||(le=="!")) {
+				document.write("Voce digitou uma pontuação.<br>");
+			} else {
+				if ((le=="b")||(le=="c")||(le=="d")||(le=="f")||(le=="g")||(le=="h")||(le=="j")||(le=="k")||(le=="l")||(le=="m")||(le=="n")||(le=="p")||(le=="q")||(le=="r")||(le=="s")||(le=="t")||(le=="v")||(le=="x")||(le=="y")||(le=="w")||(le=="z")||(le=="B")||(le=="C")||(le=="D")||(le=="F")||(le=="G")||(le=="H")||(le=="J")||(le=="K")||(le=="L")||(le=="M")||(le=="N")||(le=="P")||(le=="Q")||(le=="R")||(le=="S")||(le=="T")||(le=="V")||(le=="X")||(le=="Y")||(le=="W")||(le=="Z")||(le=="ç")||(le=="Ç")) {
+					document.write("Voce digitou uma consoante.<br>");
+				} else {
+					if ((le=="a")||(le=="e")||(le=="i")||(le=="o")||(le=="u")||(le=="A")||(le=="E")||(le=="I")||(le=="O")||(le=="U")) {
+						document.write("Voce digitou uma vogal.<br>");
+					} else {
+						document.write("Voce não digitou um número, uma pontuação, uma vogal e nem uma consoante.<br>")
+					}
+				}
+			}
+		}
+		document.write("<br>Programa finalizado.");		
+	
+	</script>
+</body>
+</html>

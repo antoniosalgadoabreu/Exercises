@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+		alert("Este programa irá verificar se o caracter digitado é um número ou pontuação.");
+		var le= prompt("Digite um caracter:");
+		var n1 = parseInt(le);
+		
+		if ((n1>=0)||(n1<=9)) {
+			document.write("Voce digitou um número.<br>");
+		} else {
+			if ((le==".")||(le==",")||(le==";")||(le==":")||(le=="?")||(le=="!")) {
+				document.write("Voce digitou uma pontuação.<br>");
+				
+			} else {
+				document.write("Voce não digitou um número ou pontuação.<br>");
+				
+			}
+		}
+		document.write("<br>Programa finalizado.");		
+	
+	</script>
+</body>
+</html>

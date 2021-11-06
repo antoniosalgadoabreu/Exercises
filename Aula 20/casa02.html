@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="..//Aula 20/css/estiloCasa02.css">
+
+    <style>
+        .marcaCheck {
+            margin-right: 10px;
+            width: 175px;
+        }
+
+        .marcaCheckI {
+            margin-right: 0px;
+            width: 22px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <label for="iNome">Nome:</label>
+            <input id="iNome" type="text" />
+            <p id="ierroNome"> </p>
+
+            <label for="iNomePai">Nome do Pai:</label>
+            <input id="iNomePai" type="text" />
+            <p id="ierroNomePai"> </p>
+
+            <label for="iNomeMae">Nome da mâe:</label>
+            <input id="iNomeMae" type="text" />
+            <p id="ierroNomeMae"> </p>
+
+            <label for="iRg">RG:</label>
+            <input id="iRg" type="text" onkeyup="checknumero(this.value, 'Rg')"/>
+            <p id="ierroRg"> </p>
+
+            <label for="iCpf">CPF:</label>
+            <input id="iCpf" type="text" onkeyup="checknumero(this.value, 'Cpf')"/>
+            <p id="ierroCpf"> </p>
+
+            <label for="iTel">Telefone:</label>
+            <input id="iTel" type="tel" onkeyup="checknumero(this.value, 'Tel')"/>
+            <p id="ierroTel"> </p>
+
+            <label for="iCel">Celular:</label>
+            <input id="iCel" type="tel" onkeyup="checknumero(this.value, 'Cel')"/>
+            <p id="ierroCel"> </p>
+
+            <label for="iEmail">E-mail:</label>
+            <input id="iEmail" type="email" onkeyup="verificarEmail(this.value)" onblur="stylePretoEmail()" />
+            <p id="ierroEmail"> </p>
+            <p id="ierroEmail2"> </p>
+
+            <label for="iNasc">Data de Nascimento:</label>
+            <input id="iNasc" type="date" />
+            <p id="ierroNasc"> </p>
+
+            <label for="iUfNasc">UF de Nascimento:</label>
+            <select id="iUfNasc">
+                <option value=""></option>
+                <option value="">AC</option>
+                <option value="">AL</option>
+                <option value="">AP</option>
+                <option value="">AM</option>
+                <option value="">BA</option>
+                <option value="">CE</option>
+                <option value="">DF</option>
+                <option value="">ES</option>
+                <option value="">GO</option>
+                <option value="">MA</option>
+                <option value="">MT</option>
+                <option value="">MS</option>
+                <option value="">MG</option>
+                <option value="">PA</option>
+                <option value="">PB</option>
+                <option value="">PR</option>
+                <option value="">PE</option>
+                <option value="">PI</option>
+                <option value="">RJ</option>
+                <option value="">RN</option>
+                <option value="">RS</option>
+                <option value="">RO</option>
+                <option value="">RR</option>
+                <option value="">SC</option>
+                <option value="">SP</option>
+                <option value="">SE</option>
+                <option value="">TO</option>
+
+            </select>
+            <p id="ierroUfNasc"></p>
+            <br>
+
+            <fieldset>
+                <legend>Nível de Escolaridade:</legend>
+
+                <label for="iEscolaP">1º Grau</label>
+                <input id="iEscolaP" class="marcaCheck" type="checkbox" />
+                <br><br>
+                <label for="iEscolaPI">1º Grau Incompleto</label>
+                <input id="iEscolaPI" class="marcaCheckI" type="checkbox" />
+                <br><br>
+                <label for="iEscolaS">2º Grau</label>
+                <input id="iEscolaS" class="marcaCheck" type="checkbox" />
+                <br><br>
+                <label for="iEscolaSI">2º Grau Incompleto</label>
+                <input id="iEscolaS" class="marcaCheckI" type="checkbox" />
+                <br><br>
+                <label for="iEscolaT">3º Grau</label>
+                <input id="iEscolaT" class="marcaCheck" type="checkbox" />
+                <br><br>
+                <label for="iEscolaTI">3º Grau Incompleto</label>
+                <input id="iEscolaTI" class="marcaCheckI" type="checkbox" />
+
+                <p id="ierroEscola"> </p>
+
+            </fieldset>
+
+            <fieldset class="rd1">
+                <legend>Sexo:</legend>
+
+                <label class="radio1" for="ihomem"><b>Homem</b></label>
+                <input type="radio" name="sexo" id="ihomem">
+                <br>
+                <br>
+                <label class="radio2" for="imulher"><b>Mulher</b></label>
+                <input type="radio" name="sexo" id="imulher">
+
+            </fieldset>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Moradia</legend>
+
+            <label for="iRua">Rua:</label>
+            <input id="iRua" type="text" />
+            <p id="ierroRua"> </p>
+
+            <label for="iNumero">Número:</label>
+            <input id="iNumero" type="number" />
+            <p id="ierroNumero"> </p>
+
+            <label for="iComplemento">Complemento:</label>
+            <input id="iComplemento" type="text" />
+            <p id="ierroComplemento"> </p>
+
+            <label for="iBairro">Bairro:</label>
+            <input id="iBairro" type="text" />
+            <p id="ierroBairro"> </p>
+
+            <label for="iCidade">Cidade:</label>
+            <input id="iCidade" type="text" />
+            <p id="ierroCidade"> </p>
+
+            <label for="iUf">UF:</label>
+            <select id="iUf">
+                <option value=""></option>
+                <option value="">AC</option>
+                <option value="">AL</option>
+                <option value="">AP</option>
+                <option value="">AM</option>
+                <option value="">BA</option>
+                <option value="">CE</option>
+                <option value="">DF</option>
+                <option value="">ES</option>
+                <option value="">GO</option>
+                <option value="">MA</option>
+                <option value="">MT</option>
+                <option value="">MS</option>
+                <option value="">MG</option>
+                <option value="">PA</option>
+                <option value="">PB</option>
+                <option value="">PR</option>
+                <option value="">PE</option>
+                <option value="">PI</option>
+                <option value="">RN</option>
+                <option value="">RS</option>
+                <option value="">RO</option>
+                <option value="">RR</option>
+                <option value="">SC</option>
+                <option value="">SP</option>
+                <option value="">SE</option>
+                <option value="">TO</option>
+
+            </select>
+            <p id="ierroUf"></p>
+            <br>
+
+            <label for="iCep">CEP:</label>
+            <input id="iCep" type="text" />
+            <p id="ierroCep"> </p>
+
+        </fieldset>
+        <br>
+        <label for="iTexto">Qualificações:</label>
+        <textarea name="Texto" id="iTexto" cols="24" rows="9"></textarea>
+        <p id="ierroTexto"> </p>
+
+        <br>
+        <input type="submit" value="Enviar" id="bEnviar" onclick="verificarCampoVazio()" />
+        <br>
+
+    </div>
+
+    <script src="..//Aula 20/js/funcoesCasa02.js"></script>
+
+</body>
+
+</html>
